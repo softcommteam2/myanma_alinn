@@ -1,0 +1,12 @@
+
+$('#quantity').change( function() {
+  var first_price = $('#product-price').text();
+  var quant = $('#quantity').val();
+  var price =  quant * first_price;
+  $('#product-line-price').html(price);
+});
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div id="product-price">12.99</div>
+<input id="quantity" type="number" value="2" min="1">
+<h3>total</h3> <div id="product-line-price">25.98</div>
