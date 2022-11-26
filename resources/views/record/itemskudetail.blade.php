@@ -37,10 +37,11 @@
     .hide{
         display: none;
     }
-    html
+    body
     {
         font-size: 19px;
         font-weight: 400;
+        background-color: #ffffff;
 
     }
     /* .print-area{
@@ -109,7 +110,7 @@
     </form>
     <div class="print-area">
     <h3 style="text-align: center;">
-        ၅၂လမ်း ကြေးမုံသတင်းစာတိုက်နေ့စဉ်ကြော်ငြာစာရင်း
+        မြန်မာ့အလင်း သတင်းစာတိုက်
     </h3>
     <h5 class=" mt-4">
         {{-- @dd($itemsku_name) --}}

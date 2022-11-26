@@ -37,10 +37,11 @@
     .hide{
         display: none;
     }
-    html
+    body
     {
         font-size: 22px;
         font-weight: bold;
+        background-color: #ffffff;
     }
 </style>
 <body>
@@ -77,7 +78,7 @@
             </div>
         </form>
         <h1 style="text-align: center;">
-            ၅၂လမ်း ကြေးမုံသတင်းစာတိုက်နေ့စဉ်ကြော်ငြာစာရင်း
+            မြန်မာ့အလင်း သတင်းစာတိုက်
         </h1>
         <h3 class="text-2xl leading-6 font-medium text-gray-900 text-left">
             @if (!empty($start_date))

@@ -145,7 +145,7 @@
            </div>
            <div class="card text-white py-5 d-md-down-none" style="width:44%">
              <div class="card-body text-center">
-               <img src="images/login_mirror_blue.png" alt="login_mirror_blue.png" style="width: 244px; height:226px; margin-right:20px;">
+               <img src="images/logo_withoud_address.png" alt="logo" width="310" height="200">
              </div>
            </div>
          </div>

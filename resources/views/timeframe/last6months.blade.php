@@ -38,6 +38,7 @@
     }body{
         visibility: hidden;
         display: none;
+        background-color: #ffffff;
    }
    .print-container, .print-container * {
         visibility:visible

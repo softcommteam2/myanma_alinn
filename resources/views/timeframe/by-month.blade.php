@@ -6,6 +6,10 @@
     .hidden {
         display: none;
     }
+    body
+    {
+        background-color: #ffffff;
+    }
 </style>
 
 <main class="main">

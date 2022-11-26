@@ -40,7 +40,7 @@
                 body{
             /* visibility:hidden; */
             transform: rotateY(0deg) rotate(90deg);
-            background-image: url(images/mmalinn_wm_print.png);
+            /* background-image: url(images/mmalinn_wm_print.png); */
             background-color: #ffff;
             font-size: 16px;
             font-weight: 500;
@@ -63,8 +63,9 @@
             left: 10px;
             right: 10px;
         }
-        .print {visibility:visible;}
-            }
+        .print {
+            visibility:visible;}
+        }
     </style>
 
   </head>
@@ -75,12 +76,10 @@
 
     <div class="app-body" style="width:1500px;">
     <main class="main">
-        <div class="card-header">
             <a class="btn btn-sm  btn-info float-right mr-1 d-print-none print" href="#" onclick="window.print();return false;" ">
                 <i class="fa fa-print"></i> Print</a>
             <a class="btn btn-sm btn-secondary float-right mr-1 d-print-none" href="sales/">
             <i class="fa fa-arrow-left"></i> Cancel</a>
-        </div>
 
 @if(empty($sales->id))
 No such ID
@@ -95,11 +94,15 @@ No such ID
                         <table>
                             <tr>
                                 <td><img src="images/logo_with_address.png" alt="" width="150" class=""></td>
-                                <td><strong>ပြန်ကြားရေးဝန်ကြီးဌာန <br>
-                                    သတင်းနှင့်စာနယ်ဇင်းလုပ်ငန်း <br>
-                                    ကြေးမုံသတင်းစာတိုက် <br>
-                                    <strong>၅၂ လမ်း ၀၁-၃၉၇၃၃၀ ၀၁-၂၉၉၄၂၇</strong> <br>
-                                    ကြော်ငြာခ/ငွေရပြေစာ</strong>
+                                <td>
+                                    <strong>
+                                        မြန်မာ့အလင်းသတင်းစာတိုက် <br>
+                                        သတင်းနှင့်စာနယ်ဇင်းလုပ်ငန်း <br>
+                                        ပြန်ကြားရေးဝန်ကြီးဌာန <br>
+                                        အမှတ်(၅၃)၊နတ်မောက်လမ်းသွယ်(၁)၊ဗိုလ်ချို(၂)ရပ်ကွက် <br>
+                                        ဗဟန်းမြို့နယ်၊ရန်ကုန်တိုင်းဒေသကြီး <br>
+                                        ၀၉-၄၃၀၃၆၀၃၀၊ ၀၁-၅၄၄၃၁၄၊ ၀၁-၈၆၀၄၅၄၇
+                                    </strong>
                                 </td>
                                 <td>
                                     <div class="pull-right rounded border border-dark" id="stamp" style="transform: rotateY(0deg) rotate(45deg); text-align:center;">Customer Copy</div>
@@ -250,11 +253,15 @@ No such ID
                         <table>
                             <tr>
                                 <td><img src="images/logo_with_address.png" alt="" width="150" class=""></td>
-                                <td><strong>ပြန်ကြားရေးဝန်ကြီးဌာန <br>
-                                    သတင်းနှင့်စာနယ်ဇင်းလုပ်ငန်း <br>
-                                    ကြေးမုံသတင်းစာတိုက် <br>
-                                    <strong>၅၂ လမ်း ၀၁-၃၉၇၃၃၀ ၀၁-၂၉၉၄၂၇</strong> <br>
-                                    ကြော်ငြာခ/ငွေရပြေစာ</strong>
+                                <td>
+                                    <strong>
+                                        မြန်မာ့အလင်းသတင်းစာတိုက် <br>
+                                        သတင်းနှင့်စာနယ်ဇင်းလုပ်ငန်း <br>
+                                        ပြန်ကြားရေးဝန်ကြီးဌာန <br>
+                                        အမှတ်(၅၃)၊နတ်မောက်လမ်းသွယ်(၁)၊ဗိုလ်ချို(၂)ရပ်ကွက် <br>
+                                        ဗဟန်းမြို့နယ်၊ရန်ကုန်တိုင်းဒေသကြီး <br>
+                                        ၀၉-၄၃၀၃၆၀၃၀၊ ၀၁-၅၄၄၃၁၄၊ ၀၁-၈၆၀၄၅၄၇
+                                    </strong>
                                 </td>
                                 <td>
                                     <div class="pull-right p-1 rounded border border-dark" id="stamp" style="transform: rotateY(0deg) rotate(45deg); text-align:center;"><strong>Cashier Copy</strong></div>
@@ -398,20 +405,24 @@ No such ID
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12" style="border-right:1px solid;">
+            <div class="col-lg-4 col-md-4 col-sm-12">
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <table>
                             <tr>
-                                <td><img src="images/logo_with_address.png" alt="" width="150" class=""></td>
-                                <td><strong>ပြန်ကြားရေးဝန်ကြီးဌာန <br>
-                                    သတင်းနှင့်စာနယ်ဇင်းလုပ်ငန်း <br>
-                                    ကြေးမုံသတင်းစာတိုက် <br>
-                                    <strong>၅၂ လမ်း ၀၁-၃၉၇၃၃၀ ၀၁-၂၉၉၄၂၇</strong> <br>
-                                    ကြော်ငြာခ/ငွေရပြေစာ</strong>
+                                <td><img src="images/logo_with_address.png" alt="" width="150"></td>
+                                <td>
+                                    <strong>
+                                        မြန်မာ့အလင်းသတင်းစာတိုက် <br>
+                                        သတင်းနှင့်စာနယ်ဇင်းလုပ်ငန်း <br>
+                                        ပြန်ကြားရေးဝန်ကြီးဌာန <br>
+                                        အမှတ်(၅၃)၊နတ်မောက်လမ်းသွယ်(၁)၊ဗိုလ်ချို(၂)ရပ်ကွက် <br>
+                                        ဗဟန်းမြို့နယ်၊ရန်ကုန်တိုင်းဒေသကြီး <br>
+                                        ၀၉-၄၃၀၃၆၀၃၀၊ ၀၁-၅၄၄၃၁၄၊ ၀၁-၈၆၀၄၅၄၇
+                                    </strong>
                                 </td>
                                 <td>
-                                    <div class="pull-right p-1 rounded border border-dark" id="stamp" style="transform: rotateY(0deg) rotate(45deg); text-align:center;"><strong>Finance Copy</strong></div>
+                                    <div class="pull-right rounded border border-dark" id="stamp" style="transform: rotateY(0deg) rotate(45deg); text-align:center;"><strong>Finance Copy</strong></div>
                                 </td>
                             </tr>
                         </table>

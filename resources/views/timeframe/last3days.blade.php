@@ -37,6 +37,10 @@
     .hide{
         display: none;
     }
+    body
+    {
+        background-color: #ffffff;
+    }
 </style>
 <body>
 

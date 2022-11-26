@@ -41,6 +41,10 @@
         font-size:18px;
         font-weight: bold;
     }
+    body
+    {
+        background-color: #ffffff;
+    }
 </style>
 <body>
 
