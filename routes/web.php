@@ -43,14 +43,14 @@ use App\Http\Controllers\Register;
 
 Route::get('/', function () {
 
-return view('auth.login');
+    return view('auth.login');
 });
 
 // Route::get('admin/', function(){
 //     return view('/layout/login', [\App\Http\Controllers\Login::class, 'layout/login']);
 // });
 
-Route::resource('/home',HomeController::class);
+Route::resource('/home', HomeController::class);
 
 // Route::resource('/login',Login::class);
 // Route::post('/logout', 'App\Http\Controllers\LogoutController@perform')->name('logout.perform');
@@ -86,7 +86,7 @@ Route::get('users/index', [UserController::class, 'index'])->name('users.index')
 
 
 // Route group
-Route::group(['middleware' => 'useradmin'], function(){
+Route::group(['middleware' => 'useradmin'], function () {
 
 
 
@@ -97,67 +97,67 @@ Route::group(['middleware' => 'useradmin'], function(){
 });
 
 Route::resource('/items', ItemController::class);
-    Route::get('/items_search', [ItemController::class, 'search']);
+Route::get('/items_search', [ItemController::class, 'search']);
 
-    Route::resource('/category', ItemCategoryController::class);
-    Route::get('/category_search', [ItemCategoryController::class, 'search']);
-
-
-    Route::resource('/ledger', RecordLedgerController::class);
+Route::resource('/category', ItemCategoryController::class);
+Route::get('/category_search', [ItemCategoryController::class, 'search']);
 
 
-    Route::resource('/role', RoleController::class);
-    Route::get('/role_search', [RoleController::class, 'search']);
-    Route::resource('/users', UserController::class);
-    Route::get('/users_search', [UserController::class, 'search']);
+Route::resource('/ledger', RecordLedgerController::class);
 
-    Route::resource('/itemsku', ItemSKUController::class);
-    Route::get('/itemsku_search', [ItemSKUController::class, 'search']);
 
-    //Timeframe
-    Route::get('/timeframe', [TimeFrame::class,'index']);
-    Route::post('/timeframe', [TimeFrame::class,'getData']);
-    // ~~~~~~~~~~~~~~~~~~~~
-    //These are the codes for Daily Report
-    Route::get('/timeframe/today', [TimeFrame::class,'today']);
-    Route::get('/timeframe/last3days', [TimeFrame::class,'last3days']);
-    Route::get('/timeframe/last7days', [TimeFrame::class,'last7days']);
-    Route::get('/timeframe/last10days', [TimeFrame::class,'last10days']);
-    Route::get('/timeframe/last14days', [TimeFrame::class,'last14days']);
-    // ~~~~~~~~~~~~~~~~~~~~
-    //THese are the codes for Weekly Report
-    Route::get('/timeframe/thisweek', [TimeFrame::class,'thisweek']);
-    Route::get('/timeframe/previousweek', [TimeFrame::class,'previousweek']);
-    //~~~~~~~~~~~~~~~~
-    //THese are the codes for Monthly Report
-    Route::get('/timeframe/thismonth', [TimeFrame::class,'thismonth']);
-    Route::get('/timeframe/previousmonth', [TimeFrame::class,'previousmonth']);
-    Route::get('/timeframe/bymonth', [TimeFrame::class,'bymonth']);
-    Route::get('/timeframe/bymonth_search', [TimeFrame::class,'bymonth_search']);
-    //~~~~~~~~~~~~~~~~
-    //THis is the codes for Yearly Report
-    Route::get('/timeframe/thisyear', [TimeFrame::class,'thisyear']);
-    //~~~~~~~~~~~~~~~~
-    Route::get('/record', [Record::class,'index']);
-    // ~~~~~~~~~~~~~~~~~~~
-    Route::get('/record/item_sku_detail', [ItemSKUDetail::class,'index']);
-    Route::post('/record/item_sku_detail', [ItemSKUDetail::class,'filterskudetail']);
-    // ~~~~~~~~~~~~~~~~~~~
-    Route::get('/record/item_sku_summary', [ItemSKUSummary::class,'index']);
-    Route::post('/record/item_sku_summary', [ItemSKUSummary::class,'filterskusummary']);
-    Route::get('/record/item_sku_summary_detail/{itemsku_id}/{start_date}/{end_date}', [ItemSKUSummary::class,'detailsummary']);
-    // ~~~~~~~~~~~~~~~~~~~
-    Route::get('/record/ledger', [RecordLedgerController::class,'index']);
-    Route::post('/record/ledger', [RecordLedgerController::class,'getData']);
+Route::resource('/role', RoleController::class);
+Route::get('/role_search', [RoleController::class, 'search']);
+Route::resource('/users', UserController::class);
+Route::get('/users_search', [UserController::class, 'search']);
+
+Route::resource('/itemsku', ItemSKUController::class);
+Route::get('/itemsku_search', [ItemSKUController::class, 'search']);
+
+//Timeframe
+Route::get('/timeframe', [TimeFrame::class, 'index']);
+Route::post('/timeframe', [TimeFrame::class, 'getData']);
+// ~~~~~~~~~~~~~~~~~~~~
+//These are the codes for Daily Report
+Route::get('/timeframe/today', [TimeFrame::class, 'today']);
+Route::get('/timeframe/last3days', [TimeFrame::class, 'last3days']);
+Route::get('/timeframe/last7days', [TimeFrame::class, 'last7days']);
+Route::get('/timeframe/last10days', [TimeFrame::class, 'last10days']);
+Route::get('/timeframe/last14days', [TimeFrame::class, 'last14days']);
+// ~~~~~~~~~~~~~~~~~~~~
+//THese are the codes for Weekly Report
+Route::get('/timeframe/thisweek', [TimeFrame::class, 'thisweek']);
+Route::get('/timeframe/previousweek', [TimeFrame::class, 'previousweek']);
+//~~~~~~~~~~~~~~~~
+//THese are the codes for Monthly Report
+Route::get('/timeframe/thismonth', [TimeFrame::class, 'thismonth']);
+Route::get('/timeframe/previousmonth', [TimeFrame::class, 'previousmonth']);
+Route::get('/timeframe/bymonth', [TimeFrame::class, 'bymonth']);
+Route::get('/timeframe/bymonth_search', [TimeFrame::class, 'bymonth_search']);
+//~~~~~~~~~~~~~~~~
+//THis is the codes for Yearly Report
+Route::get('/timeframe/thisyear', [TimeFrame::class, 'thisyear']);
+//~~~~~~~~~~~~~~~~
+Route::get('/record', [Record::class, 'index']);
 // ~~~~~~~~~~~~~~~~~~~
-    Route::get('/record/items', [RecordItemsController::class,'index']);
-    Route::post('/record/items', [RecordItemsController::class,'filterItem']);
+Route::get('/record/item_sku_detail', [ItemSKUDetail::class, 'index']);
+Route::post('/record/item_sku_detail', [ItemSKUDetail::class, 'filterskudetail']);
 // ~~~~~~~~~~~~~~~~~~~
-    Route::get('/record/daily_report', [DailyReport::class,'index']);
+Route::get('/record/item_sku_summary', [ItemSKUSummary::class, 'index']);
+Route::post('/record/item_sku_summary', [ItemSKUSummary::class, 'filterskusummary']);
+Route::get('/record/item_sku_summary_detail/{itemsku_id}/{start_date}/{end_date}', [ItemSKUSummary::class, 'detailsummary']);
 // ~~~~~~~~~~~~~~~~~~~
-    Route::get('/record/customer_or_account', [ByCusotmerOrByAccount::class,'index']);
-    Route::get('/record/cusoracc_search', [ByCusotmerOrByAccount::class,'search']);
+Route::get('/record/ledger', [RecordLedgerController::class, 'index']);
+Route::post('/record/ledger', [RecordLedgerController::class, 'getData']);
+// ~~~~~~~~~~~~~~~~~~~
+Route::get('/record/items', [RecordItemsController::class, 'index']);
+Route::post('/record/items', [RecordItemsController::class, 'filterItem']);
+// ~~~~~~~~~~~~~~~~~~~
+Route::get('/record/daily_report', [DailyReport::class, 'index']);
+// ~~~~~~~~~~~~~~~~~~~
+Route::get('/record/customer_or_account', [ByCusotmerOrByAccount::class, 'index']);
+Route::get('/record/cusoracc_search', [ByCusotmerOrByAccount::class, 'search']);
 
-Route::get('test', function(){
+Route::get('test', function () {
     return view('test');
 });
