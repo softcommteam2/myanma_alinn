@@ -31,25 +31,25 @@ class SalesController extends Controller
 
         // dd($nowDate);
 
-        $sales=Sales::where('created_at','like', $nowDate . '%' )
-                        ->orderBy('id', 'desc')
-                        ->paginate(25);
+        $sales = Sales::where('created_at', 'like', $nowDate . '%')
+            ->orderBy('id', 'desc')
+            ->paginate(25);
         $currentURL = url()->current(); //current url
-        $today=Carbon::now(); //current date
+        $today = Carbon::now(); //current date
 
-        return view('sales.index', compact( 'sales', 'currentURL'));
+        return view('sales.index', compact('sales', 'currentURL'));
     }
 
 
     public function create()
     {
-        $sales=new Sales();
-        $items=Item::all();
-        $customers=Customer::all();
-        $accounts=Account::all();
-        $years=years::all();
+        $sales = new Sales();
+        $items = Item::all();
+        $customers = Customer::all();
+        $accounts = Account::all();
+        $years = years::all();
 
-        return view('sales.create', compact( 'items', 'customers', 'sales', 'accounts', 'years'));
+        return view('sales.create', compact('items', 'customers', 'sales', 'accounts', 'years'));
     }
 
 
@@ -58,21 +58,18 @@ class SalesController extends Controller
         $final_year = DB::table('sales')->latest('id')->first();
 
         $input_budget_year = $request->budget_year;
-        if( $final_year == null)
-        {
+        if ($final_year == null) {
             $final_budget_year = 2022;
-        }else{
+        } else {
             $final_budget_year = $final_year->budget_year;
         }
 
         $itemsku_id = $request->itemsku;
         $sku_count = Sales::where('itemsku_id', $itemsku_id)->where('budget_year', $final_budget_year)->count();
 
-        if($final_budget_year < $input_budget_year)
-        {
+        if ($final_budget_year < $input_budget_year) {
             $sale_voucher_sku_id = 1;
-        }
-        else{
+        } else {
             $sale_voucher_sku_id = $sku_count;
             $sale_voucher_sku_id++;
         }
@@ -85,24 +82,20 @@ class SalesController extends Controller
 
         $day = date('D', $timestamp);
 
-        if( $day == "Sun"){
+        if ($day == "Sun") {
             Carbon::today();
-            $r_date=Carbon::today()->addDay(1, 'day')->format('Y-m-d');
-        }
-        elseif ( $day == "Sat"){
+            $r_date = Carbon::today()->addDay(1, 'day')->format('Y-m-d');
+        } elseif ($day == "Sat") {
             Carbon::today();
-            $r_date=Carbon::today()->addDay(2, 'day')->format('Y-m-d');
-        }
-        elseif ( $day == "Fri" && $record > 13){
+            $r_date = Carbon::today()->addDay(2, 'day')->format('Y-m-d');
+        } elseif ($day == "Fri" && $record > 13) {
             Carbon::today();
-            $r_date=Carbon::today()->addDay(3, 'day')->format('Y-m-d');
-        }
-        elseif ($record > 13 ){
+            $r_date = Carbon::today()->addDay(3, 'day')->format('Y-m-d');
+        } elseif ($record > 13) {
             Carbon::today();
-            $r_date=Carbon::today()->addDay(1, 'day')->format('Y-m-d');
-        }
-        else{
-            $r_date=Carbon::today()->format('Y-m-d');
+            $r_date = Carbon::today()->addDay(1, 'day')->format('Y-m-d');
+        } else {
+            $r_date = Carbon::today()->format('Y-m-d');
         }
 
         // dd($r_date);
@@ -111,14 +104,13 @@ class SalesController extends Controller
         $db_voucher = Sales::where('sale_voucher', '=',  $request->sale_voucher)->get();
 
 
-        if(count($db_voucher) > 0){
+        if (count($db_voucher) > 0) {
 
             $sale_voucher = Sales::orderBy('id', 'desc')->first('sale_voucher')->sale_voucher;
 
             $sale_voucher = explode("-", $sale_voucher);
             $sale_voucher_first_index = $sale_voucher[0];
-            $sale_voucher = $sale_voucher_first_index .'-'. $sale_voucher[count($sale_voucher)-1] + 1;
-
+            $sale_voucher = $sale_voucher_first_index . '-' . $sale_voucher[count($sale_voucher) - 1] + 1;
         }
 
         $inches = $request->quantity;
@@ -158,17 +150,16 @@ class SalesController extends Controller
         $sales->payment_comment = $request->payment_comment;
 
         $sale = $sales->save();
-        $this->log( $sales->id, 'create', url()->full());
+        $this->log($sales->id, 'create', url()->full());
 
 
         return redirect('sales')->with('alertMsg', 'Successfully created!');
-
     }
 
 
     public function show($id)
     {
-        $sales=Sales::findOrFail($id);
+        $sales = Sales::findOrFail($id);
         return view('sales.show', compact('sales'));
     }
 
@@ -185,10 +176,10 @@ class SalesController extends Controller
         }
 
 
-        $sales=Sales::findOrFail($id);
-        $items=Item::all();
-        $customers=Customer::all();
-        $accounts=Account::all();
+        $sales = Sales::findOrFail($id);
+        $items = Item::all();
+        $customers = Customer::all();
+        $accounts = Account::all();
         return view('sales.edit', compact('items', 'customers', 'sales', 'accounts'));
     }
 
@@ -207,29 +198,29 @@ class SalesController extends Controller
     }
 
 
-    public function changeStatus( $id)
+    public function changeStatus($id)
     {
         $sales = Sales::findOrFail($id);
-        $sales->update(['cancel' => 1 ]);
+        $sales->update(['cancel' => 1]);
         return redirect('sales');
     }
 
     public function showAll()
     {
-        $sales= Sales::orderBy('id', 'desc')->paginate(25);
-    return view('sales.index' , compact('sales'));
+        $sales = Sales::orderBy('id', 'desc')->paginate(25);
+        return view('sales.index', compact('sales'));
     }
 
     public function search(Request $request)
     {
-        $sales= Sales::where('sale_date', 'like', '%'.$request->search.'%')
-        ->orWhereHas('customer', function($customer) use($request){
-            $customer->where('name', 'like', '%'.$request->search.'%');
-        })
-        ->orWhereHas('itemsku', function($itemsku) use($request){
-            $itemsku->where('name', 'like', '%'.$request->search.'%');
-        })
-        ->paginate(200);
-    return view('sales.index' , compact('sales'));
+        $sales = Sales::where('sale_date', 'like', '%' . $request->search . '%')
+            ->orWhereHas('customer', function ($customer) use ($request) {
+                $customer->where('name', 'like', '%' . $request->search . '%');
+            })
+            ->orWhereHas('itemsku', function ($itemsku) use ($request) {
+                $itemsku->where('name', 'like', '%' . $request->search . '%');
+            })
+            ->paginate(200);
+        return view('sales.index', compact('sales'));
     }
 }
