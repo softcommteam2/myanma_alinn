@@ -14,7 +14,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Traits\LogTrait;
 
-
 class SalesController extends Controller
 {
     use LogTrait;
@@ -26,17 +25,12 @@ class SalesController extends Controller
 
     public function index(Request $request)
     {
-
         $nowDate = substr(now(), 0, 7);
-
-        // dd($nowDate);
-
         $sales = Sales::where('created_at', 'like', $nowDate . '%')
             ->orderBy('id', 'desc')
             ->paginate(25);
         $currentURL = url()->current(); //current url
         $today = Carbon::now(); //current date
-
         return view('sales.index', compact('sales', 'currentURL'));
     }
 
@@ -48,7 +42,6 @@ class SalesController extends Controller
         $customers = Customer::all();
         $accounts = Account::all();
         $years = years::all();
-
         return view('sales.create', compact('items', 'customers', 'sales', 'accounts', 'years'));
     }
 
@@ -75,9 +68,6 @@ class SalesController extends Controller
         }
 
         $record = date('H:i');
-        // $record = (int)$record;
-        // dd($record);
-
         $timestamp = strtotime(today());
 
         $day = date('D', $timestamp);
@@ -98,11 +88,8 @@ class SalesController extends Controller
             $r_date = Carbon::today()->format('Y-m-d');
         }
 
-        // dd($r_date);
-
         $sale_voucher = $request->sale_voucher;
         $db_voucher = Sales::where('sale_voucher', '=',  $request->sale_voucher)->get();
-
 
         if (count($db_voucher) > 0) {
 
@@ -115,12 +102,9 @@ class SalesController extends Controller
 
         $inches = $request->quantity;
         $times = $request->times;
-
         $total_inches = $inches * $times;
-        // dd($inches, $times, $total_inches);
 
         $sales = new Sales;
-
         $sales->customer_id = $request->customer_id;
         $sales->record_date = $r_date;
         $sales->item_id = $request->item_id;
@@ -152,7 +136,6 @@ class SalesController extends Controller
         $sale = $sales->save();
         $this->log($sales->id, 'create', url()->full());
 
-
         return redirect('sales')->with('alertMsg', 'Successfully created!');
     }
 
@@ -174,8 +157,6 @@ class SalesController extends Controller
                 // Preview model
                 break;
         }
-
-
         $sales = Sales::findOrFail($id);
         $items = Item::all();
         $customers = Customer::all();

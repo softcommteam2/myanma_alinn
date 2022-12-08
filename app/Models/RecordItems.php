@@ -8,11 +8,11 @@ class RecordItems extends Model
 {
     public function items()
     {
-        return this->hasOne(Items::class);
+        return $this->hasOne(Items::class);
     }
-    
+
     public function cateogry()
     {
-        return this->hasOne(ItemCategory::class);
+        return $this->hasOne(ItemCategory::class);
     }
 }

@@ -10,33 +10,6 @@ use Illuminate\Database\Eloquent\Model;
 class Sales extends Model
 {
     use HasFactory;
-    // protected $fillable=[
-    //     'customer_id',
-    //     'sale_voucher',
-    //     'sale_voucher_sku',
-    //     'sale_voucher_sku_id',
-    //     'record_date',
-    //     'sale_date',
-    //     'item_id',
-    //     'itemsku_id',
-    //     'description',
-    //     'specified_date',
-    //     'received_date',
-    //     'inches',
-    //     'columns',
-    //     'quantity',
-    //     'times',
-    //     'price',
-    //     'total_inches',
-    //     'total_price',
-    //     'discount_amount',
-    //     'comments',
-    //     'paid_id',
-    //     'total_amount',
-    //     'status',
-    //     'cancel',
-    //     'payment_comment'
-    // ];
     protected $guarded = [];
 
     protected $casts = [
@@ -46,21 +19,23 @@ class Sales extends Model
         'sale_date' => 'datetime:Y-m-d H:00',
     ];
 
-    public function customer(){
+    public function customer()
+    {
         return $this->belongsTo('App\Models\Customer', 'customer_id')->withDefault()->withTrashed();
     }
 
-    public function item(){
+    public function item()
+    {
         return $this->belongsTo('App\Models\Item', 'item_id')->withDefault()->withTrashed();
     }
 
-    public function itemsku(){
+    public function itemsku()
+    {
         return $this->belongsTo('App\Models\ItemSKU', 'itemsku_id')->withDefault()->withTrashed();
     }
 
-    public function account(){
+    public function account()
+    {
         return $this->belongsTo('App\Models\Account', 'paid_id')->withDefault()->withTrashed();
     }
-
-
 }

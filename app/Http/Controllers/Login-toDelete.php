@@ -8,6 +8,7 @@ class Login extends Controller
 {
     public function index()
     {
+        dd('dfdf');
         return view('layout.login');
     }
 }

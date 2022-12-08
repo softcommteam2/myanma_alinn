@@ -7,7 +7,7 @@
     @endphp
     <a class="navbar-brand" href="{{ url('home') }}">
         <img class="navbar-brand-full" src="{{ asset('images/logo_withoud_address.png') }}" width="full" height="50"
-            alt="KyayMone Logo">
+            alt="Myanma_Alinn Logo">
         {{-- <img class="navbar-brand-minimized" src="{{ asset('images/bluemirror.png') }}" width="30" height="30" alt="CoreUI Logo"> --}}
     </a>
 
@@ -31,8 +31,8 @@
                 </div>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-                    <button type="submit" class="btn btn-primary dropdown-item"><i
-                            class="fa fa-lock"></i>Logout</a></button>
+                    <button type="submit" onclick="return confirm('Are you sure to logout?')"
+                        class="btn btn-primary dropdown-item"><i class="fa fa-lock"></i>Logout</a></button>
                     <a href="{{ asset('help.docx.pdf') }}" target="_blank" class="btn btn-primary dropdown-item"><i
                             class="fa fa-question-circle"></i>Help</a>
                 </form>

@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function index()
     {
-        $customer= Customer::orderBy('id')->paginate(25);
+        $customer = Customer::orderBy('id')->paginate(25);
         return view('customer.index', compact('customer'));
     }
 
@@ -22,21 +22,19 @@ class CustomerController extends Controller
     {
         $customer = new Customer();
         return view('customer.create', compact('customer'));
-
     }
 
     public function store(Request $request)
     {
 
         Customer::create($request->all());
-        $url=url()->previous();
-        $hostname = parse_url($url,PHP_URL_PATH);
+        $url = url()->previous();
+        $hostname = parse_url($url, PHP_URL_PATH);
 
-        if ($hostname == "/customer/create"){
+        if ($hostname == "/customer/create") {
 
             return redirect('customer');
-        }
-        elseif($hostname == "/sales/create"){
+        } elseif ($hostname == "/sales/create") {
             return back();
         }
     }
@@ -48,7 +46,7 @@ class CustomerController extends Controller
 
     public function edit($id)
     {
-        $customer=Customer::findOrFail($id);
+        $customer = Customer::findOrFail($id);
         return view('customer.edit', compact('customer'));
     }
 
@@ -68,19 +66,19 @@ class CustomerController extends Controller
 
     public function search(Request $request)
     {
-        $customer= Customer::where('name', 'like', '%'.$request->search.'%')
-        ->orWhere('address', 'like', '%'.$request->search.'%')
-        ->orWhere('city', 'like', '%'.$request->search.'%')
-        ->orWhere('township', 'like', '%'.$request->search.'%')
-        ->paginate(25);
+        $customer = Customer::where('name', 'like', '%' . $request->search . '%')
+            ->orWhere('address', 'like', '%' . $request->search . '%')
+            ->orWhere('city', 'like', '%' . $request->search . '%')
+            ->orWhere('township', 'like', '%' . $request->search . '%')
+            ->paginate(25);
 
-        return view('customer.index' , compact('customer'));
+        return view('customer.index', compact('customer'));
     }
 
     // api
-    public function getCustomer($id) {
+    public function getCustomer($id)
+    {
         $customer = Customer::find($id);
         return response()->json($customer);
     }
-
 }

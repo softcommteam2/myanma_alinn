@@ -34,4 +34,16 @@ class LoginController extends Controller
      * @return void
      */
 
+    public function showLoginForm()
+    {
+        if (auth()->check() && request()->path() == 'login') {
+            return redirect('home');
+        }
+        return view('auth.login');
+    }
+    public function logout()
+    {
+        auth()->logout();
+        return redirect('/login');
+    }
 }

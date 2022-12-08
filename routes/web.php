@@ -6,6 +6,7 @@ use App\Http\Controllers\ItemCategoryController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\SaleDateAdjustController;
@@ -28,34 +29,17 @@ use App\Http\Controllers\Record\DailyReport;
 use App\Http\Controllers\Record\RecordCustomerController;
 use App\Http\Controllers\Record\RecordLedgerController;
 use App\Http\Controllers\Register;
+use Illuminate\Support\Facades\Auth;
 
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
-
+    if (auth()->check() && request()->path() == '/') {
+        return redirect('home');
+    }
     return view('auth.login');
 });
 
-// Route::get('admin/', function(){
-//     return view('/layout/login', [\App\Http\Controllers\Login::class, 'layout/login']);
-// });
-
 Route::resource('/home', HomeController::class);
-
-// Route::resource('/login',Login::class);
-// Route::post('/logout', 'App\Http\Controllers\LogoutController@perform')->name('logout.perform');
-
-
 
 Route::resource('/sales', SalesController::class);
 Route::post('/sales_cancel/{sales_id}', [SalesController::class, 'changeStatus']);
@@ -74,21 +58,16 @@ Route::get('/dateadjust_search', [SaleDateAdjustController::class, 'search']);
 Route::resource('/voucher', Voucher::class);
 Route::resource('/test', TestController::class);
 
-
-
-
 Route::resource('/register', Register::class);
 
 Auth::routes();
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('users/index', [UserController::class, 'index'])->name('users.index');
 
-
 // Route group
 Route::group(['middleware' => 'useradmin'], function () {
-
-
 
     Route::resource('/accounts', AccountController::class);
     Route::get('/accounts_search', [AccountController::class, 'search']);
@@ -102,9 +81,7 @@ Route::get('/items_search', [ItemController::class, 'search']);
 Route::resource('/category', ItemCategoryController::class);
 Route::get('/category_search', [ItemCategoryController::class, 'search']);
 
-
 Route::resource('/ledger', RecordLedgerController::class);
-
 
 Route::resource('/role', RoleController::class);
 Route::get('/role_search', [RoleController::class, 'search']);
