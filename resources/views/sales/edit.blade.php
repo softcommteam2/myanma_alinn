@@ -246,7 +246,6 @@
                                             </div>
                                             <div class="col-6 mt-1">
                                                 <strong class="h6">Price</strong>
-                                                {{-- @for ($items as $item ) --}}
                                                 <input type="number" readonly required name="price" onkeypress="return onlyNumberKey(event)"  id="price" onkeyup="totpri()" class="price input-group border border-info rounded form-control" value="{{ $sales->price }}" >
                                                 {{-- @endfor --}}
                                             </div>

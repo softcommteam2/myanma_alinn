@@ -49,7 +49,6 @@ class SalesController extends Controller
     public function store(Request $request)
     {
         $final_year = DB::table('sales')->latest('id')->first();
-
         $input_budget_year = $request->budget_year;
         if ($final_year == null) {
             $final_budget_year = 2022;
@@ -87,6 +86,8 @@ class SalesController extends Controller
         } else {
             $r_date = Carbon::today()->format('Y-m-d');
         }
+        // dd($request->sale_voucher);
+
 
         $sale_voucher = $request->sale_voucher;
         $db_voucher = Sales::where('sale_voucher', '=',  $request->sale_voucher)->get();
