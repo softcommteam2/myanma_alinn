@@ -422,7 +422,7 @@ No such ID
                                     </strong>
                                 </td>
                                 <td>
-                                    <div class="pull-right rounded border border-dark" id="stamp" style="transform: rotateY(0deg) rotate(45deg); text-align:center;"><strong>Finance Copy</strong></div>
+                                    <div class="pull-right rounded border border-dark" id="stamp" style="transform: rotateY(0deg) rotate(45deg); text-align:center; margin-right:15px;"><strong>Finance Copy</strong></div>
                                 </td>
                             </tr>
                         </table>
