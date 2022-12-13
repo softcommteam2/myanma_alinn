@@ -84,9 +84,9 @@
 @if(empty($sales->id))
 No such ID
 @else
-<form action="{{ url('sales') }}" method="POST") class="watermark">
+<form action="{{ url('sales') }}" method="POST" class="watermark">
     @csrf
-    <div class="container-fluid">
+    <div>
         <div class="row print-container">
             <div class="col-lg-4 col-md-4 col-sm-12" style="border-right:1px solid;">
                 <div class="row">
@@ -101,7 +101,7 @@ No such ID
                                         ပြန်ကြားရေးဝန်ကြီးဌာန <br>
                                         အမှတ်(၅၃)၊နတ်မောက်လမ်းသွယ်(၁)၊ဗိုလ်ချို(၂)ရပ်ကွက် <br>
                                         ဗဟန်းမြို့နယ်၊ရန်ကုန်တိုင်းဒေသကြီး <br>
-                                        ၀၉-၄၃၀၃၆၀၃၀၊ ၀၁-၅၄၄၃၁၄၊ ၀၁-၈၆၀၄၅၄၇
+                                        ၀၁-၅၅၉၁၁၈ | ၀၁-၅၄၅၈၃၄
                                     </strong>
                                 </td>
                                 <td>
@@ -260,7 +260,7 @@ No such ID
                                         ပြန်ကြားရေးဝန်ကြီးဌာန <br>
                                         အမှတ်(၅၃)၊နတ်မောက်လမ်းသွယ်(၁)၊ဗိုလ်ချို(၂)ရပ်ကွက် <br>
                                         ဗဟန်းမြို့နယ်၊ရန်ကုန်တိုင်းဒေသကြီး <br>
-                                        ၀၉-၄၃၀၃၆၀၃၀၊ ၀၁-၅၄၄၃၁၄၊ ၀၁-၈၆၀၄၅၄၇
+                                        ၀၁-၅၅၉၁၁၈ | ၀၁-၅၄၅၈၃၄
                                     </strong>
                                 </td>
                                 <td>
@@ -418,7 +418,7 @@ No such ID
                                         ပြန်ကြားရေးဝန်ကြီးဌာန <br>
                                         အမှတ်(၅၃)၊နတ်မောက်လမ်းသွယ်(၁)၊ဗိုလ်ချို(၂)ရပ်ကွက် <br>
                                         ဗဟန်းမြို့နယ်၊ရန်ကုန်တိုင်းဒေသကြီး <br>
-                                        ၀၉-၄၃၀၃၆၀၃၀၊ ၀၁-၅၄၄၃၁၄၊ ၀၁-၈၆၀၄၅၄၇
+                                        ၀၁-၅၅၉၁၁၈ | ၀၁-၅၄၅၈၃၄
                                     </strong>
                                 </td>
                                 <td>
