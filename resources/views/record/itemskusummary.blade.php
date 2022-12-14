@@ -46,7 +46,7 @@
 </style>
 <body>
 
-    <form method="POST">
+    <form method="get">
         @csrf
             <div class="card hide">
                 <div class="card-header">

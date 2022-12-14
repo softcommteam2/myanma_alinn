@@ -67,7 +67,7 @@
                 </div>
                 <div class="card-body ">
                         <div class="float-right">
-                            <a href="{{ url('record/item_sku_summary') }}" class="hide btn btn-warning pull-right ml-1"><span class="fa fa-arrow-left"></span> GO BACK</a>
+                            <a href="{{ url()->previous() }}" class="hide btn btn-warning pull-right ml-1"><span class="fa fa-arrow-left"></span> GO BACK</a>
                             <input type="submit" value="Search" class="btn btn-success">
                             <a href="{{ url('record/item_sku_summary') }}" class="btn btn-secondary">Show All</a>
                             <a class="pull-right ml-2" href="#" onclick="window.print();return false;">
