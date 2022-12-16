@@ -93,7 +93,7 @@ No such ID
                     <div class="col-lg-12 col-md-12">
                         <table>
                             <tr>
-                                <td><img src="images/logo_with_address.png" alt="" width="150" class=""></td>
+                                <td><img src="images/logo.png" alt="" width="150" class=""></td>
                                 <td>
                                     <strong>
                                         ပြန်ကြားရေးဝန်ကြီးဌာန <br>
@@ -252,7 +252,7 @@ No such ID
                     <div class="col-lg-12 col-md-12">
                         <table>
                             <tr>
-                                <td><img src="images/logo_with_address.png" alt="" width="150" class=""></td>
+                                <td><img src="images/logo.png" alt="" width="150" class=""></td>
                                 <td>
                                     <strong>
                                         ပြန်ကြားရေးဝန်ကြီးဌာန <br>
@@ -410,7 +410,7 @@ No such ID
                     <div class="col-lg-12 col-md-12">
                         <table>
                             <tr>
-                                <td><img src="images/logo_with_address.png" alt="" width="150"></td>
+                                <td><img src="images/logo.png" alt="" width="150"></td>
                                 <td>
                                     <strong>
                                         ပြန်ကြားရေးဝန်ကြီးဌာန <br>
