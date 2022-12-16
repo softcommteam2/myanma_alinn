@@ -145,7 +145,7 @@
                     <th>လက်မပေါင်း</th>
                     <th>သင့်ငွေ</th>
                     <th>Account</th>
-                    <th>ပါရှိနေစွဲမှတ်ချက်</th>
+                    <th>ပါရှိနေ့စွဲမှတ်ချက်</th>
                 </tr>
             </thead>
             <tbody id="result">

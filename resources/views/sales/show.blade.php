@@ -96,11 +96,11 @@ No such ID
                                 <td><img src="images/logo_with_address.png" alt="" width="150" class=""></td>
                                 <td>
                                     <strong>
-                                        မြန်မာ့အလင်းသတင်းစာတိုက် <br>
-                                        သတင်းနှင့်စာနယ်ဇင်းလုပ်ငန်း <br>
                                         ပြန်ကြားရေးဝန်ကြီးဌာန <br>
-                                        အမှတ်(၅၃)၊နတ်မောက်လမ်းသွယ်(၁)၊ဗိုလ်ချို(၂)ရပ်ကွက် <br>
-                                        ဗဟန်းမြို့နယ်၊ရန်ကုန်တိုင်းဒေသကြီး <br>
+                                        သတင်းနှင့်စာနယ်ဇင်းလုပ်ငန်း <br>
+                                        မြန်မာ့အလင်းသတင်းစာတိုက် <br>
+                                        အမှတ်(၅၃)၊နတ်မောက်လမ်းသွယ်(၁)၊ဗိုလ်ချို(၂)ရပ်ကွက်<br>
+                                        ဗဟန်းမြို့နယ်<br>
                                         ၀၁-၅၅၉၁၁၈ | ၀၁-၅၄၅၈၃၄
                                     </strong>
                                 </td>
@@ -194,7 +194,7 @@ No such ID
                         <strong>သင့်ငွေ :</strong>
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <strong>{{ number_format($sales->total_price) }} ကျပ်</strong>
+                        <strong>{{ number_format($sales->timeprice) }} ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row">
@@ -242,7 +242,7 @@ No such ID
                 </div>
                 <div class="row" style="margin: 50px; border:1px solid; padding-left:10px; margin-left:0px;">
                     <div class="col-lg-12 col-md-12" style="margin: 10px;">
-                        <strong>ဖော်ပြပါနေ၌ ကြော်ငြာပါရန်ကြိုးစားပါမည်
+                        <strong>ယနေ့ထည့်မနက်ဖြန် ကြော်ငြာပါရန်ကြိုးစားပါမည်
                             သို့သော်အကြောင်းမညီညွတ်၍နေရာမရှိပါက တာဝန်မယူနိုင်ပါ။</strong>
                     </div>
                 </div>
@@ -255,11 +255,11 @@ No such ID
                                 <td><img src="images/logo_with_address.png" alt="" width="150" class=""></td>
                                 <td>
                                     <strong>
-                                        မြန်မာ့အလင်းသတင်းစာတိုက် <br>
-                                        သတင်းနှင့်စာနယ်ဇင်းလုပ်ငန်း <br>
                                         ပြန်ကြားရေးဝန်ကြီးဌာန <br>
-                                        အမှတ်(၅၃)၊နတ်မောက်လမ်းသွယ်(၁)၊ဗိုလ်ချို(၂)ရပ်ကွက် <br>
-                                        ဗဟန်းမြို့နယ်၊ရန်ကုန်တိုင်းဒေသကြီး <br>
+                                        သတင်းနှင့်စာနယ်ဇင်းလုပ်ငန်း <br>
+                                        မြန်မာ့အလင်းသတင်းစာတိုက် <br>
+                                        အမှတ်(၅၃)၊နတ်မောက်လမ်းသွယ်(၁)၊ဗိုလ်ချို(၂)ရပ်ကွက်<br>
+                                        ဗဟန်းမြို့နယ်<br>
                                         ၀၁-၅၅၉၁၁၈ | ၀၁-၅၄၅၈၃၄
                                     </strong>
                                 </td>
@@ -352,7 +352,7 @@ No such ID
                         <strong>သင့်ငွေ :</strong>
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <strong>{{ number_format($sales->total_price) }} ကျပ်</strong>
+                        <strong>{{ number_format($sales->timeprice) }} ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row">
@@ -400,7 +400,7 @@ No such ID
                 </div>
                 <div class="row" style="margin: 50px; border:1px solid; padding-left:10px; margin-left:0px;">
                 <div class="col-lg-12 col-md-12" style="margin: 10px;">
-                        <strong>ဖော်ပြပါနေ၌ ကြော်ငြာပါရန်ကြိုးစားပါမည်
+                        <strong>ယနေ့ထည့်မနက်ဖြန် ကြော်ငြာပါရန်ကြိုးစားပါမည်
                             သို့သော်အကြောင်းမညီညွတ်၍နေရာမရှိပါက တာဝန်မယူနိုင်ပါ။ </strong>
                     </div>
                 </div>
@@ -413,11 +413,11 @@ No such ID
                                 <td><img src="images/logo_with_address.png" alt="" width="150"></td>
                                 <td>
                                     <strong>
-                                        မြန်မာ့အလင်းသတင်းစာတိုက် <br>
-                                        သတင်းနှင့်စာနယ်ဇင်းလုပ်ငန်း <br>
                                         ပြန်ကြားရေးဝန်ကြီးဌာန <br>
-                                        အမှတ်(၅၃)၊နတ်မောက်လမ်းသွယ်(၁)၊ဗိုလ်ချို(၂)ရပ်ကွက် <br>
-                                        ဗဟန်းမြို့နယ်၊ရန်ကုန်တိုင်းဒေသကြီး <br>
+                                        သတင်းနှင့်စာနယ်ဇင်းလုပ်ငန်း <br>
+                                        မြန်မာ့အလင်းသတင်းစာတိုက် <br>
+                                        အမှတ်(၅၃)၊နတ်မောက်လမ်းသွယ်(၁)၊ဗိုလ်ချို(၂)ရပ်ကွက်<br>
+                                        ဗဟန်းမြို့နယ်<br>
                                         ၀၁-၅၅၉၁၁၈ | ၀၁-၅၄၅၈၃၄
                                     </strong>
                                 </td>
@@ -510,7 +510,7 @@ No such ID
                         <strong>သင့်ငွေ :</strong>
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <strong>{{ number_format($sales->total_price) }} ကျပ်</strong>
+                        <strong>{{ number_format($sales->timeprice) }} ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row">
@@ -558,7 +558,7 @@ No such ID
                 </div>
                 <div class="row" style="margin: 50px; border:1px solid; padding-left:10px; margin-left:0px;">
                 <div class="col-lg-12 col-md-12" style="margin: 10px;">
-                        <strong>ဖော်ပြပါနေ၌ ကြော်ငြာပါရန်ကြိုးစားပါမည်
+                        <strong>ယနေ့ထည့်မနက်ဖြန် ကြော်ငြာပါရန်ကြိုးစားပါမည်
                             သို့သော်အကြောင်းမညီညွတ်၍နေရာမရှိပါက တာဝန်မယူနိုင်ပါ။</strong>
                     </div>
                 </div>
