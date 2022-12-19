@@ -43,7 +43,7 @@
             /* background-image: url(images/mmalinn_wm_print.png); */
             background-color: #ffff;
             font-size: 16px;
-            font-weight: 500;
+            /* font-weight: 500; */
             /* background-size: 1400px 1000px; */
             /* width: 1500px; */
 
@@ -93,7 +93,7 @@ No such ID
                     <div class="col-lg-12 col-md-12">
                         <table>
                             <tr>
-                                <td><img src="images/logo.png" alt="" width="150" class=""></td>
+                                <td><img src="images/logo.png" alt="" width="180"></td>
                                 <td>
                                     <strong>
                                         ပြန်ကြားရေးဝန်ကြီးဌာန <br>
@@ -252,7 +252,7 @@ No such ID
                     <div class="col-lg-12 col-md-12">
                         <table>
                             <tr>
-                                <td><img src="images/logo.png" alt="" width="150" class=""></td>
+                                <td><img src="images/logo.png" alt="" width="180"></td>
                                 <td>
                                     <strong>
                                         ပြန်ကြားရေးဝန်ကြီးဌာန <br>
@@ -410,7 +410,7 @@ No such ID
                     <div class="col-lg-12 col-md-12">
                         <table>
                             <tr>
-                                <td><img src="images/logo.png" alt="" width="150"></td>
+                                <td><img src="images/logo.png" alt="" width="180"></td>
                                 <td>
                                     <strong>
                                         ပြန်ကြားရေးဝန်ကြီးဌာန <br>
