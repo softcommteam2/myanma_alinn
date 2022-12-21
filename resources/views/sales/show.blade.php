@@ -29,7 +29,7 @@
     <style>
         .watermark
         {
-            background-image: url(images/mmalinn_wm.png);
+            background-image: url(images/watermark_with_address.png);
             background-repeat: no-repeat;
             background-size: 1400px 1000px;
         }
@@ -93,7 +93,7 @@ No such ID
                     <div class="col-lg-12 col-md-12">
                         <table>
                             <tr>
-                                <td><img src="images/logo.png" alt="" width="180"></td>
+                                <td><img src="images/logo.png" alt="" width="160"></td>
                                 <td>
                                     <strong>
                                         ပြန်ကြားရေးဝန်ကြီးဌာန <br>
@@ -252,7 +252,7 @@ No such ID
                     <div class="col-lg-12 col-md-12">
                         <table>
                             <tr>
-                                <td><img src="images/logo.png" alt="" width="180"></td>
+                                <td><img src="images/logo.png" alt="" width="160"></td>
                                 <td>
                                     <strong>
                                         ပြန်ကြားရေးဝန်ကြီးဌာန <br>
@@ -410,7 +410,7 @@ No such ID
                     <div class="col-lg-12 col-md-12">
                         <table>
                             <tr>
-                                <td><img src="images/logo.png" alt="" width="180"></td>
+                                <td><img src="images/logo.png" alt="" width="160"></td>
                                 <td>
                                     <strong>
                                         ပြန်ကြားရေးဝန်ကြီးဌာန <br>
@@ -544,7 +544,7 @@ No such ID
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-5 col-md-5">
                         <strong>ငွေကိုင်</strong>
                     </div>
                     <div class="col-lg-6 col-md-6">
@@ -552,7 +552,7 @@ No such ID
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-7 col-md-7">
                         <strong>ငွေပေးချေမှု {{ $sales->account->name }}</strong>
                     </div>
                 </div>
