@@ -43,7 +43,7 @@
             /* background-image: url(images/mmalinn_wm_print.png); */
             background-color: #ffff;
             font-size: 16px;
-            font-weight: 500;
+            /* font-weight: 500; */
             /* background-size: 1400px 1000px; */
             /* width: 1500px; */
 
