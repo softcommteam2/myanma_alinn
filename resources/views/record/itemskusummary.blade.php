@@ -46,7 +46,7 @@
 </style>
 <body>
 
-    <form method="post">
+    <form method="get" action="{{url('record/item_sku_summary/filter')}}">
         @csrf
             <div class="card hide">
                 <div class="card-header">
@@ -113,7 +113,7 @@
                     <td>{{ $i++ }}</td>
 
                     @if (!empty($start_date))
-                    <td><a href="{{url('/record/item_sku_summary_detail/'.$sale->itemsku_id.'/'.$start_date.'/'.$end_date)}}" target="_blank">{{ $sale->itemsku->name }}</a></td>
+                    <td><a href="{{url('/record/item_sku_summary_detail/'.$sale->itemsku_id.'/'.$start_date.'/'.$end_date)}}">{{ $sale->itemsku->name }}</a></td>
                     @else
                     <td>{{ $sale->itemsku->name }}</td>
                     @endif

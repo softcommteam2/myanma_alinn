@@ -121,7 +121,7 @@ Route::get('/record/item_sku_detail', [ItemSKUDetail::class, 'index']);
 Route::post('/record/item_sku_detail', [ItemSKUDetail::class, 'filterskudetail']);
 // ~~~~~~~~~~~~~~~~~~~
 Route::get('/record/item_sku_summary', [ItemSKUSummary::class, 'index']);
-Route::post('/record/item_sku_summary', [ItemSKUSummary::class, 'filterskusummary']);
+Route::get('/record/item_sku_summary/filter', [ItemSKUSummary::class, 'filterskusummary']);
 Route::get('/record/item_sku_summary_detail/{itemsku_id}/{start_date}/{end_date}', [ItemSKUSummary::class, 'detailsummary']);
 // ~~~~~~~~~~~~~~~~~~~
 Route::get('/record/ledger', [RecordLedgerController::class, 'index']);
