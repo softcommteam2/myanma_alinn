@@ -39,7 +39,7 @@ class SalesController extends Controller
     {
         $sales = new Sales();
         $items = Item::all();
-        $customers = Customer::all();
+        $customers = Customer::take(5)->orderBy('created_at', 'desc')->get();
         $accounts = Account::all();
         $years = years::all();
         return view('sales.create', compact('items', 'customers', 'sales', 'accounts', 'years'));
