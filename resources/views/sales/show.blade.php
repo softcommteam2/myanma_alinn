@@ -60,7 +60,7 @@
         }
         .print-container{
             position: relative;
-            left: 70px;
+            left: 10px;
             margin-right: 125px;
         }
         .print {
