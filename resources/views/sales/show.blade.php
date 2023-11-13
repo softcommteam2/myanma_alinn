@@ -88,9 +88,9 @@ No such ID
     @csrf
     <div>
         <div class="row print-container">
-            <div class="col-lg-4 col-md-4 col-sm-12" style="border-right:1px solid;">
+            <div class="col-sm-4" style="border-right:1px solid;">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12">
+                    <div class="col-sm-12">
                         <table>
                             <tr>
                                 <td><img src="images/logo.png" alt="" width="155"></td>
@@ -112,144 +112,144 @@ No such ID
                     </div>
                 </div>
                         <div class="row mt-5">
-                            <div class="col-lg-12 col-md-12">
+                            <div class="col-sm-12">
 
                                 </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-sm-6">
                                 <strong>အမည် :{{ $sales->customer->name }}</strong>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-sm-6">
                                 <strong>နေ့စွဲ : <?=$dt->format('d-m-Y H:i');?> </strong>
                                 </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-sm-6">
                                 <strong>ဖုန်း : </strong>{{$sales->customer->phone}}
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-sm-6">
                                 <strong>ဘောက်ချာ : {{ $sales->item->itemsku->name }} - {{$sales->sale_voucher_sku_id}}</strong>
                                 </div>
                         </div>
                 <hr style="background-color:black;">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>အမျိုးအစား :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->item->name }}</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
 
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->item->category->name }} ({{number_format( $sales->item->price) }}) ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>အကြောင်းအရာ :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->description }} </strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>အရွယ်အစား :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>({{ $sales->inches }}) Inches x ({{ $sales->columns }}) Column</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>လက်မပေါင်း :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->total_inches }}</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>အကြိမ်ပေါင်း :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->times }}</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>စျေးနှုန်း :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ number_format($sales->price)  }} ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>သင့်ငွေ :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ number_format($sales->timeprice) }} ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>မှတ်ချက် :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->comments }}</strong>
                     </div>
                 </div>
                 <hr style="background-color:black;">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>လျှော့ပေးငွေ :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong> {{ number_format($sales->discount_amount) }} ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>ကျသင့်ငွေပေါင်း :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ number_format($sales->total_amount) }} ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row" style="margin: 50px;">
-                    <div class="col-lg-12 col-md-12">
+                    <div class="col-sm-12">
 
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>ငွေကိုင်</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>လက်ထောက်မန်နေဂျာ (ကြော်ငြာ)</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>ငွေပေးချေမှု {{ $sales->account->name }}</strong>
                     </div>
                 </div>
                 <div class="row" style="margin: 50px; border:1px solid; padding-left:10px; margin-left:0px;">
-                    <div class="col-lg-12 col-md-12" style="margin: 10px;">
+                    <div class="col-sm-12" style="margin: 10px;">
                         <strong>ယနေ့ထည့်မနက်ဖြန် ကြော်ငြာပါရန်ကြိုးစားပါမည်
                             သို့သော်အကြောင်းမညီညွတ်၍နေရာမရှိပါက တာဝန်မယူနိုင်ပါ။</strong>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12" style="border-right:1px solid;">
+            <div class="col-sm-4" style="border-right:1px solid;">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12">
+                    <div class="col-sm-12">
                         <table>
                             <tr>
                                 <td><img src="images/logo.png" alt="" width="155"></td>
@@ -271,143 +271,143 @@ No such ID
                     </div>
                 </div>
                         <div class="row mt-5">
-                            <div class="col-lg-12 col-md-12">
+                            <div class="col-sm-12">
                                 </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-sm-6">
                                 <strong>အမည် :{{ $sales->customer->name }}</strong>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-sm-6">
                                 <strong>နေ့စွဲ : <?=$dt->format('d-m-Y H:i');?> </strong>
                                 </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-sm-6">
                                 <strong>ဖုန်း : </strong>{{$sales->customer->phone}}
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-sm-6">
                                 <strong>ဘောက်ချာ : {{ $sales->item->itemsku->name }} - {{$sales->sale_voucher_sku_id}}</strong>
                                 </div>
                         </div>
                 <hr style="background-color:black;">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>အမျိုးအစား :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->item->name }}</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
 
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->item->category->name }} ({{number_format( $sales->item->price) }}) ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>အကြောင်းအရာ :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->description }} </strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>အရွယ်အစား :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>({{ $sales->inches }}) Inches x ({{ $sales->columns }}) Column</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>လက်မပေါင်း :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->total_inches }}</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>အကြိမ်ပေါင်း :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->times }}</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>စျေးနှုန်း :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ number_format($sales->price)  }} ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>သင့်ငွေ :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ number_format($sales->timeprice) }} ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>မှတ်ချက် :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->comments }}</strong>
                     </div>
                 </div>
                 <hr style="background-color:black;">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>လျှော့ပေးငွေ :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong> {{ number_format($sales->discount_amount) }} ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>ကျသင့်ငွေပေါင်း :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ number_format($sales->total_amount) }} ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row" style="margin: 50px;">
-                    <div class="col-lg-12 col-md-12">
+                    <div class="col-sm-12">
 
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>ငွေကိုင်</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>လက်ထောက်မန်နေဂျာ (ကြော်ငြာ)</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>ငွေပေးချေမှု {{ $sales->account->name }}</strong>
                     </div>
                 </div>
                 <div class="row" style="margin: 50px; border:1px solid; padding-left:10px; margin-left:0px;">
-                <div class="col-lg-12 col-md-12" style="margin: 10px;">
+                <div class="col-sm-12" style="margin: 10px;">
                         <strong>ယနေ့ထည့်မနက်ဖြန် ကြော်ငြာပါရန်ကြိုးစားပါမည်
                             သို့သော်အကြောင်းမညီညွတ်၍နေရာမရှိပါက တာဝန်မယူနိုင်ပါ။ </strong>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="col-sm-4">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12">
+                    <div class="col-sm-12">
                         <table>
                             <tr>
                                 <td><img src="images/logo.png" alt="" width="155"></td>
@@ -429,117 +429,117 @@ No such ID
                     </div>
                 </div>
                         <div class="row mt-5">
-                            <div class="col-lg-12 col-md-12">
+                            <div class="col-sm-12">
                                 </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-sm-6">
                                 <strong>အမည် :{{ $sales->customer->name }}</strong>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-sm-6">
                                 <strong>နေ့စွဲ : <?=$dt->format('d-m-Y H:i');?> </strong>
                                 </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-sm-6">
                                 <strong>ဖုန်း : </strong>{{$sales->customer->phone}}
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-sm-6">
                                 <strong>ဘောက်ချာ : {{ $sales->item->itemsku->name }} - {{$sales->sale_voucher_sku_id}}</strong>
                                 </div>
                         </div>
                 <hr style="background-color:black;">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>အမျိုးအစား :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->item->name }}</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
 
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->item->category->name }} ({{number_format( $sales->item->price) }}) ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>အကြောင်းအရာ :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->description }} </strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>အရွယ်အစား :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>({{ $sales->inches }}) Inches x ({{ $sales->columns }}) Column</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>လက်မပေါင်း :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->total_inches }}</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>အကြိမ်ပေါင်း :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->times }}</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>စျေးနှုန်း :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ number_format($sales->price)  }} ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>သင့်ငွေ :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ number_format($sales->timeprice) }} ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>မှတ်ချက် :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ $sales->comments }}</strong>
                     </div>
                 </div>
                 <hr style="background-color:black;">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>လျှော့ပေးငွေ :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong> {{ number_format($sales->discount_amount) }} ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>ကျသင့်ငွေပေါင်း :</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>{{ number_format($sales->total_amount) }} ကျပ်</strong>
                     </div>
                 </div>
                 <div class="row" style="margin: 50px;">
-                    <div class="col-lg-12 col-md-12">
+                    <div class="col-sm-12">
 
                     </div>
                 </div>
@@ -547,17 +547,17 @@ No such ID
                     <div class="col-lg-5 col-md-5">
                         <strong>ငွေကိုင်</strong>
                     </div>
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-sm-6">
                         <strong>လက်ထောက်မန်နေဂျာ (ကြော်ငြာ)</strong>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-7 col-md-7">
+                    <div class="col-sm-7">
                         <strong>ငွေပေးချေမှု {{ $sales->account->name }}</strong>
                     </div>
                 </div>
                 <div class="row" style="margin: 50px; border:1px solid; padding-left:10px; margin-left:0px;">
-                <div class="col-lg-12 col-md-12" style="margin: 10px;">
+                <div class="col-sm-12" style="margin: 10px;">
                         <strong>ယနေ့ထည့်မနက်ဖြန် ကြော်ငြာပါရန်ကြိုးစားပါမည်
                             သို့သော်အကြောင်းမညီညွတ်၍နေရာမရှိပါက တာဝန်မယူနိုင်ပါ။</strong>
                     </div>

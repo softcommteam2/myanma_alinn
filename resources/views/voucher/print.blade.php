@@ -76,7 +76,7 @@ No such ID
     @csrf
     <div class="container-fluid">
         <div class="row print-container">
-            <div class="col-lg-4 col-md-4 col-sm-12" style="border-right:1px solid;">
+            <div class="col-sm-4" style="border-right:1px solid;">
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <table>
@@ -237,7 +237,7 @@ No such ID
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12" style="border-right:1px solid;">
+            <div class="col-sm-4" style="border-right:1px solid;">
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <table>
@@ -397,7 +397,8 @@ No such ID
                             သို့သော်အကြောင်းမညီညွတ်၍နေရာမရှိပါက တာဝန်မယူနိုင်ပါ</strong>
                     </div>
                 </div>
-            </div><div class="col-lg-4 col-md-4 col-sm-12" style="border-right:1px solid;">
+            </div>
+            <div class="col-sm-4" style="border-right:1px solid;">
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <table>
