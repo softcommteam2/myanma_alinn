@@ -45,7 +45,7 @@
             font-size: 16px;
             /* font-weight: 500; */
             /* background-size: 1400px 1000px; */
-            /* width: 1500px; */
+            /* width: 1600px; */
 
         }
         .watermark
@@ -53,15 +53,15 @@
             left: 0;
             right: 0;
             top: 0;
-            width: 1500px;
+            width: 1600px;
         }
         .print-container, .print-container * {
             visibility: visible;
         }
         .print-container{
             position: relative;
-            left: 10px;
-            right: 10px;
+            left: 70px;
+            margin-right: 125px;
         }
         .print {
             visibility:visible;}

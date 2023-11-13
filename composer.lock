@@ -231,6 +231,7 @@
         },
         {
             "name": "doctrine/dbal",
+<<<<<<< HEAD
             "version": "3.7.0",
             "source": {
                 "type": "git",
@@ -241,6 +242,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/dbal/zipball/00d03067f07482f025d41ab55e4ba0db5eca2cdf",
                 "reference": "00d03067f07482f025d41ab55e4ba0db5eca2cdf",
+=======
+            "version": "3.6.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/dbal.git",
+                "reference": "8e0e268052b4a8974cb00215bb2892787021614f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/8e0e268052b4a8974cb00215bb2892787021614f",
+                "reference": "8e0e268052b4a8974cb00215bb2892787021614f",
+>>>>>>> 38f147f94252e89f421b0a39417fed7437be5caa
                 "shasum": ""
             },
             "require": {
@@ -256,9 +269,15 @@
                 "doctrine/coding-standard": "12.0.0",
                 "fig/log-test": "^1",
                 "jetbrains/phpstorm-stubs": "2023.1",
+<<<<<<< HEAD
                 "phpstan/phpstan": "1.10.35",
                 "phpstan/phpstan-strict-rules": "^1.5",
                 "phpunit/phpunit": "9.6.13",
+=======
+                "phpstan/phpstan": "1.10.34",
+                "phpstan/phpstan-strict-rules": "^1.5",
+                "phpunit/phpunit": "9.6.12",
+>>>>>>> 38f147f94252e89f421b0a39417fed7437be5caa
                 "psalm/plugin-phpunit": "0.18.4",
                 "slevomat/coding-standard": "8.13.1",
                 "squizlabs/php_codesniffer": "3.7.2",
@@ -324,7 +343,11 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/dbal/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/doctrine/dbal/tree/3.7.0"
+=======
+                "source": "https://github.com/doctrine/dbal/tree/3.6.7"
+>>>>>>> 38f147f94252e89f421b0a39417fed7437be5caa
             },
             "funding": [
                 {
@@ -340,6 +363,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2023-09-26T20:56:55+00:00"
         },
         {
@@ -354,6 +378,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/deprecations/zipball/4f2d4f2836e7ec4e7a8625e75c6aa916004db931",
                 "reference": "4f2d4f2836e7ec4e7a8625e75c6aa916004db931",
+=======
+            "time": "2023-09-19T20:15:41+00:00"
+        },
+        {
+            "name": "doctrine/deprecations",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/deprecations.git",
+                "reference": "612a3ee5ab0d5dd97b7cf3874a6efe24325efac3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/612a3ee5ab0d5dd97b7cf3874a6efe24325efac3",
+                "reference": "612a3ee5ab0d5dd97b7cf3874a6efe24325efac3",
+>>>>>>> 38f147f94252e89f421b0a39417fed7437be5caa
                 "shasum": ""
             },
             "require": {
@@ -385,9 +425,15 @@
             "homepage": "https://www.doctrine-project.org/",
             "support": {
                 "issues": "https://github.com/doctrine/deprecations/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/doctrine/deprecations/tree/1.1.2"
             },
             "time": "2023-09-27T20:04:15+00:00"
+=======
+                "source": "https://github.com/doctrine/deprecations/tree/v1.1.1"
+            },
+            "time": "2023-06-03T09:27:29+00:00"
+>>>>>>> 38f147f94252e89f421b0a39417fed7437be5caa
         },
         {
             "name": "doctrine/event-manager",
@@ -2506,6 +2552,7 @@
         },
         {
             "name": "nesbot/carbon",
+<<<<<<< HEAD
             "version": "2.71.0",
             "source": {
                 "type": "git",
@@ -2516,6 +2563,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/98276233188583f2ff845a0f992a235472d9466a",
                 "reference": "98276233188583f2ff845a0f992a235472d9466a",
+=======
+            "version": "2.70.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/briannesbitt/Carbon.git",
+                "reference": "d3298b38ea8612e5f77d38d1a99438e42f70341d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d3298b38ea8612e5f77d38d1a99438e42f70341d",
+                "reference": "d3298b38ea8612e5f77d38d1a99438e42f70341d",
+>>>>>>> 38f147f94252e89f421b0a39417fed7437be5caa
                 "shasum": ""
             },
             "require": {
@@ -2608,7 +2667,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2023-09-25T11:31:05+00:00"
+=======
+            "time": "2023-09-07T16:43:50+00:00"
+>>>>>>> 38f147f94252e89f421b0a39417fed7437be5caa
         },
         {
             "name": "nette/schema",
@@ -4220,6 +4283,7 @@
         },
         {
             "name": "spatie/temporary-directory",
+<<<<<<< HEAD
             "version": "2.2.0",
             "source": {
                 "type": "git",
@@ -4230,6 +4294,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/spatie/temporary-directory/zipball/efc258c9f4da28f0c7661765b8393e4ccee3d19c",
                 "reference": "efc258c9f4da28f0c7661765b8393e4ccee3d19c",
+=======
+            "version": "2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/temporary-directory.git",
+                "reference": "0c804873f6b4042aa8836839dca683c7d0f71831"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/temporary-directory/zipball/0c804873f6b4042aa8836839dca683c7d0f71831",
+                "reference": "0c804873f6b4042aa8836839dca683c7d0f71831",
+>>>>>>> 38f147f94252e89f421b0a39417fed7437be5caa
                 "shasum": ""
             },
             "require": {
@@ -4265,7 +4341,11 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/temporary-directory/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/spatie/temporary-directory/tree/2.2.0"
+=======
+                "source": "https://github.com/spatie/temporary-directory/tree/2.1.2"
+>>>>>>> 38f147f94252e89f421b0a39417fed7437be5caa
             },
             "funding": [
                 {
@@ -4277,7 +4357,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2023-09-25T07:13:36+00:00"
+=======
+            "time": "2023-04-28T07:47:42+00:00"
+>>>>>>> 38f147f94252e89f421b0a39417fed7437be5caa
         },
         {
             "name": "symfony/console",
@@ -6941,6 +7025,7 @@
         },
         {
             "name": "yajra/laravel-datatables-oracle",
+<<<<<<< HEAD
             "version": "v10.9.0",
             "source": {
                 "type": "git",
@@ -6951,6 +7036,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/5fd89966fd779cce69a30f6262207242b55db523",
                 "reference": "5fd89966fd779cce69a30f6262207242b55db523",
+=======
+            "version": "v10.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yajra/laravel-datatables.git",
+                "reference": "9165711838eb0c503efad380551673d92e089e12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/9165711838eb0c503efad380551673d92e089e12",
+                "reference": "9165711838eb0c503efad380551673d92e089e12",
+>>>>>>> 38f147f94252e89f421b0a39417fed7437be5caa
                 "shasum": ""
             },
             "require": {
@@ -7013,7 +7110,11 @@
             ],
             "support": {
                 "issues": "https://github.com/yajra/laravel-datatables/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/yajra/laravel-datatables/tree/v10.9.0"
+=======
+                "source": "https://github.com/yajra/laravel-datatables/tree/v10.8.0"
+>>>>>>> 38f147f94252e89f421b0a39417fed7437be5caa
             },
             "funding": [
                 {
@@ -7021,7 +7122,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2023-09-29T07:34:10+00:00"
+=======
+            "time": "2023-08-12T02:08:05+00:00"
+>>>>>>> 38f147f94252e89f421b0a39417fed7437be5caa
         }
     ],
     "packages-dev": [
