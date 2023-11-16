@@ -544,7 +544,7 @@ No such ID
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-5 col-md-5">
+                    <div class="col-lg-5 col-sm-5">
                         <strong>ငွေကိုင်</strong>
                     </div>
                     <div class="col-sm-6">
